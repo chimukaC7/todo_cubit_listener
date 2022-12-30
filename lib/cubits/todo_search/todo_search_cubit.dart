@@ -9,4 +9,5 @@ class TodoSearchCubit extends Cubit<TodoSearchState> {
   void setSearchTerm(String newSearchTerm) {
     emit(state.copyWith(searchTerm: newSearchTerm));
   }
+  
 }

@@ -10,13 +10,14 @@ class TodoListCubit extends Cubit<TodoListState> {
 
   void addTodo(String todoDesc) {
     final newTodo = Todo(desc: todoDesc);
-    final newTodos = [...state.todos, newTodo];
+    final newTodos = [...state.todos, newTodo];//combining the new todo to the already existing the list
 
     emit(state.copyWith(todos: newTodos));
     print(state);
   }
 
   void editTodo(String id, String todoDesc) {
+
     final newTodos = state.todos.map((Todo todo) {
       if (todo.id == id) {
         return Todo(
@@ -25,6 +26,7 @@ class TodoListCubit extends Cubit<TodoListState> {
           completed: todo.completed,
         );
       }
+
       return todo;
     }).toList();
 
@@ -32,6 +34,7 @@ class TodoListCubit extends Cubit<TodoListState> {
   }
 
   void toggleTodo(String id) {
+
     final newTodos = state.todos.map((Todo todo) {
       if (todo.id == id) {
         return Todo(
@@ -40,6 +43,7 @@ class TodoListCubit extends Cubit<TodoListState> {
           completed: !todo.completed,
         );
       }
+      
       return todo;
     }).toList();
 

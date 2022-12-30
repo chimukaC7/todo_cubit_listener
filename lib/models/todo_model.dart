@@ -8,11 +8,14 @@ enum Filter {
 }
 
 Uuid uuid = Uuid();
+//used when creating and editing
 
 class Todo extends Equatable {
+
   final String id;
   final String desc;
   final bool completed;
+
   Todo({
     String? id,
     required this.desc,
@@ -22,6 +25,7 @@ class Todo extends Equatable {
   @override
   List<Object> get props => [id, desc, completed];
 
+  //making it human readable
   @override
   String toString() => 'Todo(id: $id, desc: $desc, completed: $completed)';
 }

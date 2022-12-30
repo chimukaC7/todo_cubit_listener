@@ -1,7 +1,9 @@
 part of 'filtered_todos_cubit.dart';
 
 class FilteredTodosState extends Equatable {
+
   final List<Todo> filteredTodos;
+  
   FilteredTodosState({
     required this.filteredTodos,
   });

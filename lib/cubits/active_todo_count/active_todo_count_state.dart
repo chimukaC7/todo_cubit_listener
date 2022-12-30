@@ -2,6 +2,7 @@ part of 'active_todo_count_cubit.dart';
 
 class ActiveTodoCountState extends Equatable {
   final int activeTodoCount;
+  
   ActiveTodoCountState({
     required this.activeTodoCount,
   });

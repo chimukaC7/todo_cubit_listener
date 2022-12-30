@@ -50,7 +50,7 @@ class ShowTodos extends StatelessWidget {
         },
         itemBuilder: (BuildContext context, int index) {
           return Dismissible(
-            key: ValueKey(todos[index].id),
+            key: ValueKey(todos[index].id),//uniquely to identity
             background: showBackground(0),
             secondaryBackground: showBackground(1),
             onDismissed: (_) {
@@ -85,6 +85,7 @@ class ShowTodos extends StatelessWidget {
     );
   }
 
+  //to display red background and trash icon
   Widget showBackground(int direction) {
     return Container(
       margin: const EdgeInsets.all(4.0),
@@ -100,8 +101,10 @@ class ShowTodos extends StatelessWidget {
   }
 }
 
+//list item
 class TodoItem extends StatefulWidget {
   final Todo todo;
+  
   const TodoItem({
     Key? key,
     required this.todo,

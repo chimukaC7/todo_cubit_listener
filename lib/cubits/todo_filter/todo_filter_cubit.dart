@@ -11,4 +11,5 @@ class TodoFilterCubit extends Cubit<TodoFilterState> {
   void changeFilter(Filter newFilter) {
     emit(state.copyWith(filter: newFilter));
   }
+  
 }
