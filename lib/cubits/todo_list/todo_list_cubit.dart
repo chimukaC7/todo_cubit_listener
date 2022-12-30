@@ -6,6 +6,7 @@ import '../../models/todo_model.dart';
 part 'todo_list_state.dart';
 
 class TodoListCubit extends Cubit<TodoListState> {
+  
   TodoListCubit() : super(TodoListState.initial());
 
   void addTodo(String todoDesc) {
@@ -43,7 +44,7 @@ class TodoListCubit extends Cubit<TodoListState> {
           completed: !todo.completed,
         );
       }
-      
+
       return todo;
     }).toList();
 

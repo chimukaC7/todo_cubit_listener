@@ -18,13 +18,14 @@ class TodoHeader extends StatelessWidget {
         ),
         BlocListener<TodoListCubit, TodoListState>(
           listener: (context, state) {
+
             final int activeTodoCount = state.todos
                 .where((Todo todo) => !todo.completed)
                 .toList()
                 .length;
-            context
-                .read<ActiveTodoCountCubit>()
-                .calculateActiveTodoCount(activeTodoCount);
+
+            context.read<ActiveTodoCountCubit>().calculateActiveTodoCount(activeTodoCount);
+
           },
           child: BlocBuilder<ActiveTodoCountCubit, ActiveTodoCountState>(
             builder: (context, state) {

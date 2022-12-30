@@ -26,8 +26,11 @@ class _CreateTodoState extends State<CreateTodo> {
       decoration: InputDecoration(labelText: 'What to do?'),
       onSubmitted: (String? todoDesc) {
         if (todoDesc != null && todoDesc.trim().isNotEmpty) {
+
           context.read<TodoListCubit>().addTodo(todoDesc);
+
           newTodoController.clear();
+          
         }
       },
     );

@@ -6,6 +6,7 @@ import '../../models/todo_model.dart';
 import '../../utils/debounce.dart';
 
 class SearchAndFilterTodo extends StatelessWidget {
+  
   SearchAndFilterTodo({Key? key}) : super(key: key);
   final debounce = Debounce(milliseconds: 1000);
 

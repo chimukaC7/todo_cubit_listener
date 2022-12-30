@@ -28,9 +28,7 @@ class MyApp extends StatelessWidget {
           create: (context) => ActiveTodoCountCubit( initialActiveTodoCount: context.read<TodoListCubit>().state.todos.length,),//passing in a value to the constructor
         ),
         BlocProvider<FilteredTodosCubit>(
-          create: (context) => FilteredTodosCubit(
-            initialTodos: context.read<TodoListCubit>().state.todos,
-          ),
+          create: (context) => FilteredTodosCubit(initialTodos: context.read<TodoListCubit>().state.todos,),
         ),
       ],
       child: MaterialApp(
